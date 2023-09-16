@@ -1,9 +1,8 @@
 import React from 'react';
 import { ReactComponent as Logo } from "../../assets/TV Show.svg";
-import { ReactComponent as MenuLogo } from '../'
+import { ReactComponent as MenuLogo } from '../../assets/Menu.svg';
 
 const Nav = () => {
-
 
     return (
 

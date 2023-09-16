@@ -3,9 +3,7 @@ import { ReactComponent as Logo } from "../../assets/TV Show.svg";
 import { ReactComponent as MenuLogo } from '../../assets/Menu.svg';
 
 const Nav = () => {
-
     return (
-
         <div className="nav">
             <div className="left">
                 <Logo />
@@ -21,7 +19,6 @@ const Nav = () => {
                 <h2>Sign In</h2>
                 <MenuLogo />
             </div>
-
         </div>
     )
 }

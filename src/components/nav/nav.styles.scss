@@ -1,0 +1,30 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.search__box {
+    width: 45%;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+}
+
+.search {
+    display: inline-block;
+    color: white;
+    outline: none;
+    border: 0px;
+    cursor: pointer;
+}
+
+.left {
+    display: flex;
+    width: 20%;
+}
+
+.right {
+    display: flex;
+    width: 20%;
+}

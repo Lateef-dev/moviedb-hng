@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { ReactComponent as TomatoLogo } from '../../assets/tomato.svg';
+import { ReactComponent as trailerLogo } from '../../assets/TV Show.svg';
 
 import axios from '../../axios';
 import requests from '../../requests';
 
-import Nav from '../nav/nav.component';
+// import Nav from '../nav/nav.component';
+
+import './header.styles.scss'
 
 
 const Header = () => {
@@ -30,22 +33,23 @@ const Header = () => {
     return (
         <div className="header" style={{
             backgroundSize: "cover",
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`,
-            backgroundPosition: "center center",
-            height: "60vh",
-            display: "flex",
-            flexDirection: "column"
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            backgroundPosition: "center center"
         }}>
             <div className="header__content">
-                <div className="header__content--right">
-                    <h1>{movie.title}</h1>
+                <div className="header__content--left">
+                    <h1 className="movie__title">{movie?.title || movie?.name || movie?.original_name}
+                    </h1>
                     <div>
                         <div className="right">
                             <TomatoLogo />
-                            <p>{movie.popularity}</p>
+                            <p>{movie?.popularity}</p>
                         </div>
-                        <p className="overview">{movie.overview}</p>
-                        <button className="btn">Watch Trailer</button>
+                        <p className="overview">{movie?.overview}</p>
+                        <button className="btn">
+                            <trailerLogo />
+                            <span>Watch Trailer</span>
+                            </button>
                     </div>
 
                     <div className="header__content--right">
